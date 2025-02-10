@@ -6,6 +6,10 @@ import { HomeComponent } from './home/home.component';
 @Component({
   selector: 'app-root',
   imports: [
+    /*
+    Here you have to write the components to be using
+    by this component.
+    */
     HomeComponent
   ],
   templateUrl: "app.component.html",
