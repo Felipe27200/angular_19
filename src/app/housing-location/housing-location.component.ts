@@ -3,9 +3,18 @@ import { CommonModule } from '@angular/common';
 
 import { HousingLocation } from '../housinglocation';
 
+/**
+ * To use the routerLink is neccesary to import
+ * the RouterModule from @angular/router
+ */
+import {RouterModule} from '@angular/router';
+
 @Component({
   selector: 'app-housing-location',
-  imports: [],
+  imports: [
+    CommonModule,
+    RouterModule
+  ],
   templateUrl: './housing-location.component.html',
   styleUrl: './housing-location.component.css'
 })
