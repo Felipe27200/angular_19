@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-// Components
-import { HomeComponent } from './home/home.component';
+// Import the RouterModule to use the routing.
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ import { HomeComponent } from './home/home.component';
     Here you have to write the components to be using
     by this component.
     */
-    HomeComponent
+    RouterModule
   ],
   templateUrl: "app.component.html",
   styleUrls: ['./app.component.css'],
