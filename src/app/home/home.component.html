@@ -1,7 +1,23 @@
 <section>
     <form>
-      <input type="text" placeholder="Filter by city" />
-      <button class="primary" type="button">Search</button>
+      <!-- 
+        #filter is a template reference variable that refers
+        to the input element (can also referes to a component).
+
+        This lets us to access to the input element as its value.
+      -->
+      <input type="text" placeholder="Filter by city" #filter/>
+
+      <!-- 
+        In the eventhandler, we pass the value of the input
+        through the template reference variable #filter using
+        the value property to access the input value.
+      -->
+      <button 
+        class="primary" 
+        type="button"
+        (click)="filterResults(filter.value)"
+      >Search</button>
     </form>
   </section>
   <section class="results">
@@ -16,7 +32,7 @@
         used int the *ngFor directive.
     -->
     <app-housing-location 
-      *ngFor="let housingLocation of housingLocationList"
+      *ngFor="let housingLocation of filteredLocationList"
       [housingLocation]="housingLocation"
     ></app-housing-location>
   </section>
